@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+
+.navbar a.active {
+    color: var(--text-color); 
+}
+
+
+.navbar a:hover {
+    background: var(--snd-bg-color);
+    color: var(--main-color);
+}
+
+
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;    
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1{
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+} 
+
+.home-img img {
+    width: 25vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.btn {        /*BTN ESTA DEFINIDO COMO CLASE, NO SIGNIFICA QUE ES UN BOTON ES ESPECIFICO*/
+    display: inline-block;                 /* El botón se comporta como texto (puede ir en línea), pero permite ancho, alto, márgenes, etc. */
+    padding: 1rem 2.8rem;                  /* Espaciado interno: 1rem arriba/abajo y 2.8rem a los costados (izquierda/derecha). */
+    background: var(--main-color);         /* Color de fondo tomado desde una variable CSS llamada --main-color. */
+    border-radius: 4rem;                   /* Bordes muy redondeados, le da forma de píldora (pill). */
+    box-shadow: 0 0 1rem var(--main-color);    /* Sombra alrededor del botón, del mismo color que el fondo. Le da efecto brillante. */
+    font-size: 1.6rem;                        /* Tamaño de fuente del texto del botón. */
+    color: var(--bg-color);                   /* Color del texto, usando la variable --bg-color (probablemente blanco o similar). */
+    letter-spacing: .1rem;                   /* Espaciado entre letras. */
+    font-weight: 600;                         /* Grosor del texto: seminegrita. */
+    transition: .5s ease;                    /* Cualquier cambio en propiedades (como la sombra) será suave y durará 0.5s. */
+}
+
+.btn:hover {
+    box-shadow: none;                        /* Al pasar el cursor, se elimina la sombra, lo que da un efecto visual sutil. */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;    
+}
+
+.education-title span {
+    color: var(--text-color);
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    display: inline-block;
+    transform: translateY(-40px);
+}
+
+.experience-title span {
+    color: var(--text-color);
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    display: inline-block;
+    transform: translateY(-40px);
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 3rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.resume h2 {
+    margin-bottom: 5rem;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.resume-container .resume-box {
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.resume-container .resume-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.resume-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.resume-box h3 {
+    font-size: 2.6rem;
+}
+
+.resume-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.portfolio {
+    background: var(--snd-bg-color);
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--snd-bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bg-color);
+}
+
+.footer-text {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+}
+
+
+/*BREAKPOINT*/
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+    }
+
+    .resume {
+        padding: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%; 
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content {
+        order: 2;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img img {
+        width: 90vw;
+        margin-top: 4rem;
+    }
+
+    .resume h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-img img {
+        width: 80vw;
+        margin-top: 8rem;
+    }
+
+    .about-img img{
+        width: 100vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%; 
+    }
+}
+
+
+
+/* SECCION DEL TIMELINE */
+
+.timeline{           /*TIMELINE ES TODA LA SECCIÓN*/
+    position: relative;    /* Define la posición relativa de la línea del tiempo, lo que permite posicionar otros elementos en relación con ella. */
+    max-width: 1200px;     /* Establece el ancho máximo de la línea del tiempo en 1200px. */
+    margin: 100px auto;   /* Aplica un margen de 100px en la parte superior e inferior, y centra el contenedor horizontalmente. */
+    transform: translateY(-70px);
+}
+
+.container{              /* con CONTAINER se refiere  A TODOS LOS BOX DE CONTENIDO*/
+    padding: 10px 50px;                    /* Aplica un padding de 10px en la parte superior e inferior, y 50px a los lados del contenedor. */
+    position: relative;                    /* Define la posición relativa del contenedor, lo que permite el uso de posicionamiento absoluto de los elementos dentro de él. */
+    width: 50%;                            /* Establece el ancho del contenedor al 50% del ancho del contenedor padre (la línea del tiempo). */
+    animation: movedown 20s linear forwards;    /* Aplica una animación llamada "movedown" que dura 20 segundos, tiene un comportamiento lineal y se ejecuta hacia adelante. */
+    opacity: 0;                            /* Inicializa la opacidad en 0 (completamente invisible). */
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 1;                             /* En el inicio de la animación (0%), la opacidad es 1 (totalmente visible). */
+        transform: translateY(-30px);           /* La animación comienza desplazando el contenedor 30px hacia arriba. */
+    }
+    100% {
+        opacity: 1;                             /* Al final de la animación (100%), la opacidad sigue siendo 1 (totalmente visible). */
+        transform: translateY(0px);             /* El contenedor vuelve a su posición original (sin desplazamiento vertical). */
+    }
+}
+
+
+.container:nth-child(1){               /* Selecciona el primer contenedor de la línea de tiempo. */
+    animation-delay: 1s;               /* Retrasa la animación del primer contenedor por 1 segundo. */
+}
+.container:nth-child(2){
+    animation-delay: 2s;               /* Retrasa la animación del primer contenedor por 2 segundo. */
+}
+.container:nth-child(3){
+    animation-delay: 3s;                /* Retrasa la animación del primer contenedor por 3 segundo. */
+}
+.container:nth-child(4){
+    animation-delay: 4s;                /* Retrasa la animación del primer contenedor por 4 segundo. */
+}
+
+
+.text-box {
+    padding: 20px 30px;                    /* Aplica un padding de 20px en la parte superior e inferior, y 30px a los lados de la caja de texto. */
+    background: var(--snd-bg-color);       /* Usa un color de fondo definido por la variable --snd-bg-color. */
+    position: relative;                     /* Define la posición relativa de la caja de texto para un posible posicionamiento de elementos internos. */
+    border-radius: 6px;                  /* Redondea las esquinas de la caja de texto con un radio de 6px. */
+    font-size: 20px;                     /* Establece el tamaño de la fuente en 20px. */
+}
+
+.left-container {                 /* Posiciona el contenedor izquierdo en la posición 0 (a la izquierda del contenedor padre). */
+    left: 0;
+}
+
+.right-container {                /* Posiciona el contenedor derecho a la mitad del contenedor padre (50% del ancho). */
+    left: 50%;
+}
+
+.container img{                 
+    position: absolute;         /* Posiciona la imagen de manera absoluta dentro de su contenedor. */
+    width: 80px;                /* Establece el ancho de la imagen a 80px. */
+    border-radius: 50%;         /* Redondea la imagen para hacerla circular. */
+    right: -40px;               /* Desplaza la imagen 40px hacia la derecha fuera del contenedor. */
+    top: 16px;                  /* Desplaza la imagen 16px desde la parte superior de su contenedor. */
+    z-index: 10;                /* Coloca la imagen por encima de otros elementos, con un valor de z-index de 10. */
+}
+  
+
+.right-container img {
+    left: -40px;                 /* Para el contenedor derecho, mueve la imagen 40px hacia la izquierda fuera del contenedor. */
+}
+
+.img-link img {
+    transition: all 0.3s ease;
+    border-radius: 50%; /* mantiene el estilo circular */
+}
+
+.img-link:hover img {
+    box-shadow: 0 0 15px darkturquoise; /* sombra celeste */
+    transform: scale(1.7); /* agranda un poco la imagen */
+    background-color: darkturquoise; /* sutil fondo */
+}
+
+.text-link h2 {
+    transition: all 0.3s ease;
+    display: inline-block; /* Permite escalar como bloque pero se comporta como línea */
+    color: darkturquoise; /* mantiene el color */
+    cursor: pointer; /* hace que el cursor sea tipo "manito" */
+}
+
+.text-link:hover h2 {
+    transform: scale(1.1); /* agranda sutilmente */
+    text-shadow: 0 0 10px var(--main-color); /* resplandor suave */
+    color: darkturquoise; /* cambia el color si querés destacarlo más */
+}
+
+
+.timeline::after {                   /* Crea un pseudo-elemento ::after para la línea blanca. */
+    content: '';                     /* Se asegura de que el pseudo-elemento tenga contenido vacío. */
+    position: absolute;              /* Define la posición absoluta del pseudo-elemento. */
+    width: 6px;                      /* Establece el ancho de la línea blanca en 6px. */
+    height: 100%;                    /* Establece la altura de la línea blanca al 100% del contenedor padre. */
+    background: #fff;              /* Define el color de fondo de la línea como blanco. */
+    top: 0;                          /* Posiciona la línea al principio del contenedor (en la parte superior). */
+    left: 50%;                       /* Centra la línea horizontalmente en el contenedor. */
+    margin-left: -3px;               /* Ajusta la línea para que quede perfectamente centrada (por el ancho de 6px). */
+    z-index: -1;                     /* Coloca la línea en un plano inferior al de los otros elementos. */
+    animation: moveline 5s linear forwards;       /* Aplica una animación llamada "moveline" que dura 5 segundos y tiene un comportamiento lineal. */
+}
+
+
+@keyframes moveline {
+    0%{
+        height: 0;             /* Al principio de la animación, la línea tiene una altura de 0px. */
+    }
+    100% {
+        height: 100%;         /* Al final de la animación, la línea alcanza el 100% de la altura del contenedor. */
+    }
+}
+
+.text-box h2 {                                    
+    font-weight: 700;          /* Establece el peso de la fuente en 700 (negrita). */
+    color: darkturquoise;    /* Define el color del texto.*/
+    font-size: 3.8rem;          /* Establece el tamaño de la fuente del título en 3.8rem. */
+} 
+
+.text-box h2 {
+    display: inline-block;       /* Establece que el elemento pequeño se comporte como un bloque en línea. */
+    margin-bottom: 10px;          /* Aplica un margen en la parte inferior de 15px. */
+}
+
+.text-box h3 {
+    display: inline-block; 
+    margin-bottom: 10px;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+@media screen and (max-width:600px) {
+    .timeline{
+        margin:50px auto;
+    }
+    .timeline::after {
+        left:31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0; 
+    }
+    
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    max-width: 100%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 100px;
+  }
+  
+  .image-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-item img {
+    max-width: 400px;
+    min-height: 350px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .image-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(53, 174, 239, 0.6);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  
+  .image-item:hover .caption {
+    opacity: 1;
+  }
